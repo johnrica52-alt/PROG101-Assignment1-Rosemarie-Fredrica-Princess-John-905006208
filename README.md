@@ -22,3 +22,52 @@ Step 18: Display the final status.
 Step 19: End.
 
 # PROG101-Assignment1-Rosemarie-Fredrica-Princess-John-905006208
+
+PSEUDOCODE
+BEGIN
+
+DISPLAY "Community Waste Collection and Reporting System"
+
+INPUT user_name
+INPUT location
+INPUT waste_type
+INPUT description
+
+IF user_name = EMPTY OR
+   location = EMPTY OR
+   waste_type = EMPTY OR
+   description = EMPTY THEN
+
+      DISPLAY "Incomplete report"
+      DISPLAY "Please enter all required information"
+
+ELSE
+
+      SAVE report
+      status = "Pending"
+
+      DISPLAY "Report submitted successfully"
+
+      ASSIGN report to collection_worker
+      status = "Assigned"
+
+      DISPLAY "Report assigned to collection worker"
+
+      INPUT collection_completed
+
+      IF collection_completed = YES THEN
+            status = "Collected"
+            DISPLAY "Waste collected successfully"
+
+            status = "Closed"
+            DISPLAY "Report closed"
+
+      ELSE
+            status = "Assigned"
+            DISPLAY "Collection still pending"
+      END IF
+
+END IF
+
+# PROG101-Assignment1-Rosemarie-Fredrica-Princess-John-905006208
+
